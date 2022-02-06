@@ -29,11 +29,35 @@
             android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_3"
             app:destination="@id/thirdFragment"
             app:popUpTo="@id/thirdFragment" />
+
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_2"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/secondFragment" />
+
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_1"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/firstFragment" />
+
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_3_inclusive"
             app:destination="@id/thirdFragment"
             app:popUpTo="@id/thirdFragment"
             app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_2_inclusive"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/secondFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment_pop_up_to_1_inclusive"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
+
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
             app:destination="@id/firstFragment" />

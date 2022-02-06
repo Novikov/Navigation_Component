@@ -28,6 +28,30 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             Navigation.findNavController(view).navigate(action)
         }
 
+        // ничего не произойдет
+        view.findViewById<Button>(R.id.to3button_pop_up_to_2)?.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToThirdFragmentPopUpTo2()
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        // удалится 2 фрагмент
+        view.findViewById<Button>(R.id.to3button_pop_up_to_2_inclusive)?.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToThirdFragmentPopUpTo2Inclusive()
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        // удалится 2 фрагмент
+        view.findViewById<Button>(R.id.to3button_pop_up_to_1)?.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToThirdFragmentPopUpTo1()
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        // удалится 1 и 2 фрагмент
+        view.findViewById<Button>(R.id.to3button_pop_up_to_1_inclusive)?.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToThirdFragmentPopUpTo1Inclusive()
+            Navigation.findNavController(view).navigate(action)
+        }
+
         view.findViewById<Button>(R.id.to1button)?.setOnClickListener {
             val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
             Navigation.findNavController(view).navigate(action)
