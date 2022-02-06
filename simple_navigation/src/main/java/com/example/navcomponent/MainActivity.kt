@@ -12,14 +12,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var controller: NavController
 
     @SuppressLint("RestrictedApi")
-    private val listener = NavController.OnDestinationChangedListener { controller, destination, arguments ->
-        Log.i("ADSSADDSA", "${controller.backStack.size} ")
-    }
+    private val listener =
+        NavController.OnDestinationChangedListener { controller, destination, arguments ->
+            val backStack =
+                controller.backStack.toList()
+                    .map { it.destination.displayName.substringAfter("id/") }
+            Log.i("bsView", "$backStack")
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
         controller = navHostFragment.navController
     }
 

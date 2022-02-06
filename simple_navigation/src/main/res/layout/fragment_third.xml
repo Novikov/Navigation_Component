@@ -33,10 +33,41 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="to 1 fragment"
+        app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/to2button" />
+
+    <Button
+        android:id="@+id/to_1_button_pop_up_to_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="to 1 fragment pop up to 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to1button" />
+
+    <Button
+        android:id="@+id/to_1_button_pop_up_to_1_inclusive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="to 1 fragment pop up to 1 inclusive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_1_button_pop_up_to_1" />
+
+    <Button
+        android:id="@+id/to_1_button_pop_up_to_1_single_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="to 1 fragment pop up to 1 single top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_1_button_pop_up_to_1_inclusive" />
 
     <Space
         android:id="@+id/space"

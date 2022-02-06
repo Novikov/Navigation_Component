@@ -19,5 +19,23 @@ class ThirdFragment : Fragment(R.layout.fragment_third) {
             val action = ThirdFragmentDirections.actionThirdFragmentToSecondFragment()
             Navigation.findNavController(view).navigate(action)
         }
+
+        // pop up to - выгрузить стек до фрагмента
+        view.findViewById<Button>(R.id.to_1_button_pop_up_to_1)?.setOnClickListener {
+            val action = ThirdFragmentDirections.actionThirdFragmentToFirstFragmentPopUpToFirstFragment()
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        // pop up to inclusive = true - выгрузить стек до фрагмента, включая сам фрагмент
+        view.findViewById<Button>(R.id.to_1_button_pop_up_to_1_inclusive)?.setOnClickListener {
+            val action = ThirdFragmentDirections.actionThirdFragmentToFirstFragmentPopUpToFirstFragmentPopUpToInclusive()
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        // launch single top = true - фрагмент не добавится если уже есть в стеке
+        view.findViewById<Button>(R.id.to_1_button_pop_up_to_1_single_top)?.setOnClickListener {
+            val action = ThirdFragmentDirections.actionThirdFragmentToFirstFragmentPopUpToFirstFragmentLaunchSingleTop()
+            Navigation.findNavController(view).navigate(action)
+        }
     }
 }
