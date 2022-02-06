@@ -28,11 +28,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/to3button_pop_up_to_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="to 3 fragment pop up to 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to3button" />
+
+    <Button
+        android:id="@+id/to3button_pop_up_to_3_inclusive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="to 3 fragment pop up to 3 inclusive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to3button_pop_up_to_3" />
+
+    <Button
         android:id="@+id/to1button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="to 1 fragment"
+        app:layout_constraintVertical_bias="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
